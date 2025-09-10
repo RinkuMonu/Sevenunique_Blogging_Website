@@ -25,3 +25,8 @@ body {
   /* color: var(--foreground); */
   font-family: Inria Serif;
 }
+.adverimg{
+  position: relative !important;
+  border-radius: 10px;
+
+}

@@ -8,44 +8,45 @@ const articles = [
     title: 'Lorem ipsum dolor sit amet, consectetur',
     category: 'Sports',
     date: 'Sept 3, 2025',
-    imageUrl: 'https://images.unsplash.com/photo-1552667466-07770ae110d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imageUrl: '/sports/img6.png'
   },
   {
     id: 2,
     title: 'Consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
     date: 'Sept 3, 2025',
-    imageUrl: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imageUrl: '/sports/img2.png'
   },
   {
     id: 3,
     title: 'Eiusmod tempor incididunt ut labore et dolore',
     category: 'Sports',
     date: 'Sept 3, 2025',
-    imageUrl: 'https://images.unsplash.com/photo-1579952516518-6c211a139d76?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imageUrl: '/sports/img7.png'
   },
   {
     id: 4,
     title: 'Ut enim ad minim veniam, quis nostrud',
     category: 'Sports',
     date: 'Sept 4, 2025',
-    imageUrl: 'https://images.unsplash.com/photo-1543326727-cf6c39e8f853?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imageUrl: '/sports/img8.png'
   },
   {
     id: 5,
     title: 'Quis nostrud exercitation ullamco laboris nisi',
     category: 'Sports',
     date: 'Sept 4, 2025',
-    imageUrl: 'https://images.unsplash.com/photo-1626252346592-74782935531d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imageUrl: '/sports/img1.png'
   },
-   {
+  {
     id: 6,
     title: 'Nisi ut aliquip ex ea commodo consequat',
     category: 'Sports',
     date: 'Sept 5, 2025',
-    imageUrl: 'https://images.unsplash.com/photo-1553909774-68046271a4f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    imageUrl: '/sports/img2.png'
   },
 ];
+
 
 
 
