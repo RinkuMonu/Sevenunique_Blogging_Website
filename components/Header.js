@@ -1,0 +1,162 @@
+"use client"
+import { useState } from 'react';
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaWhatsapp, FaTwitter, FaBars } from 'react-icons/fa';
+import { IoSearchOutline } from "react-icons/io5";
+import { TiArrowSortedDown } from "react-icons/ti";
+
+
+export default function Header() {
+    const [language, setLanguage] = useState('English');
+
+    return (
+        <header className="w-full space-y-3">
+
+            {/* Advertisement */}
+            <div className="bg-white mb-4 text-center py-2 text-sm font-medium  px-24">
+                {/* Advertisement <span className="font-bold">728*90</span> */}
+            </div>
+
+            {/* Language Selection + Location + Social Icons + Sign Up */}
+            <div className="flex items-center justify-between px-24 py-3 bg-white border border-black">
+
+                {/* Left: Language Options */}
+                <div className="flex space-x-6 items-center">
+                    <button className="hover:underline text-sm">हिन्दी</button>
+                    <button className="hover:underline text-sm">English</button>
+                    <button className="hover:underline text-sm">ગુજરાતી</button>
+                    <button className="hover:underline text-sm">हिन्दी</button>
+                    <button className="hover:underline text-sm">English</button>
+                    <button className="hover:underline text-sm">ગુજરાતી</button>
+                    <select
+                        value={language}
+                        onChange={(e) => setLanguage(e.target.value)}
+                        className=" rounded px-2 py-1 text-sm"
+                    >
+                        <option>हिन्दी</option>
+                        <option>English</option>
+                        <option>ગુજરાતી</option>
+                    </select>
+                    <div className="w-px h-6 bg-gray-300"></div>
+
+                </div>
+
+                {/* Center: Location */}
+                <div className="font-semibold text-xl">Jaipur</div>
+
+                {/* Right: Social Media Icons + Sign Up */}
+                <div className="flex items-center space-x-3 text-xl">
+                    <div className="w-px h-6 bg-gray-300"></div>
+
+                    <FaFacebook className="cursor-pointer text-3xl text-blue-600" />
+                    <FaInstagram className="cursor-pointer text-3xl text-pink-500" />
+                    <FaLinkedin className="cursor-pointer text-3xl text-blue-700" />
+                    <FaYoutube className="cursor-pointer text-3xl text-red-600" />
+                    <FaWhatsapp className="cursor-pointer text-3xl text-green-500" />
+                    <FaTwitter className="cursor-pointer text-3xl text-blue-400" />
+                    <button className="bg-[#002765] text-white px-10 py-1 rounded-full text-sm">Sign Up</button>
+                </div>
+            </div>
+
+            {/* Trending Bar */}
+            <div className="bg-white  px-24 mx-auto text-red-600 py-2 text-sm whitespace-nowrap overflow-x-auto">
+                <strong className='text-black'>Trending :</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+            </div>
+
+            {/* Navigation Menu */}
+            <nav className="bg-blue-900 text-white px-24 py-3">
+                <ul className="flex items-center space-x-10 text-md">
+
+                    {/* Hamburger Menu */}
+                    <li>
+                        <a href="#" className=""><FaBars /></a>
+                    </li>
+
+                    {/* Search Icon */}
+                    <li>
+                        <a href="#" className=""><IoSearchOutline /></a>
+                    </li>
+
+
+                    <li className="relative group">
+                        <a href="#" className="flex gap-1 items-center ">
+                            Home <TiArrowSortedDown />
+                        </a>
+                        <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Dashboard</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Latest</a></li>
+                        </ul>
+                    </li>
+
+                    <li className="relative group">
+                        <a href="#" className="flex gap-1 items-center ">
+                            State <TiArrowSortedDown />
+                        </a>
+                        <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Cricket</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">MMA</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Football</a></li>
+                        </ul>
+                    </li>
+                    <li className="relative group">
+                        <a href="#" className="flex gap-1 items-center ">
+                            Business <TiArrowSortedDown />
+                        </a>
+                        <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">League of Legends</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Dota 2</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">CS:GO</a></li>
+                        </ul>
+                    </li>
+
+                    <li className="relative group">
+                        <a href="#" className="flex gap-1 items-center ">
+                            Entertainment <TiArrowSortedDown />
+                        </a>
+                        <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Live Scores</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Fixtures</a></li>
+                        </ul>
+                    </li>
+
+                    <li className="relative group">
+                        <a href="#" className="flex gap-1 items-center ">
+                            Sports <TiArrowSortedDown />
+                        </a>
+                        <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">ATP</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">WTA</a></li>
+                        </ul>
+                    </li>
+                    <li className="relative group">
+                        <a href="#" className="flex gap-1 items-center ">
+                            Lifestyle <TiArrowSortedDown />
+                        </a>
+                        <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Schedule</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Medal Table</a></li>
+                        </ul>
+                    </li>
+                    <li className="relative group">
+                        <a href="#" className="flex gap-1 items-center ">
+                            Technology <TiArrowSortedDown />
+                        </a>
+                        <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">International</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">Domestic</a></li>
+                        </ul>
+                    </li>
+                    <li className="relative group">
+                        <a href="#" className="flex gap-1 items-center ">
+                            Election<TiArrowSortedDown />
+                        </a>
+                        <ul className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">More 1</a></li>
+                            <li><a href="#" className="block px-4 py-2 hover:bg-gray-200">More 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+    );
+}
