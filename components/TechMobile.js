@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import FocusSection from "./FocusSection";
 
 export default function TechMobile() {
   return (
@@ -94,35 +95,7 @@ export default function TechMobile() {
         </div>
       </div>
 
-      {/* Bottom Slider (In Focus) */}
-      <div className="flex items-center justify-between gap-4 border-t pt-4">
-        <div className="flex flex-wrap gap-2">
-          <span className="px-4 py-1 bg-gray-200 rounded-full text-sm font-semibold cursor-pointer">
-            In Focus
-          </span>
-          <span className="px-4 py-1 bg-gray-100 rounded-full text-sm cursor-pointer">
-            Lorem
-          </span>
-          <span className="px-4 py-1 bg-gray-100 rounded-full text-sm cursor-pointer">
-            Lorem ipsum dolor sit amet,
-          </span>
-          <span className="px-4 py-1 bg-gray-200 rounded-full text-sm font-semibold cursor-pointer">
-            In Focus
-          </span>
-          <span className="px-4 py-1 bg-gray-100 rounded-full text-sm cursor-pointer">
-            Lorem ipsum dolor sit amet,
-          </span>
-          <span className="px-4 py-1 bg-gray-200 rounded-full text-sm font-semibold cursor-pointer">
-            In Focus
-          </span>
-        </div>
-
-        {/* Navigation Arrows */}
-        <div className="flex items-center gap-2">
-          <button className="px-2 py-1 border rounded-full">{">"}</button>
-          <button className="px-2 py-1 border rounded-full">{"<"}</button>
-        </div>
-      </div>
+      <FocusSection />
     </section>
   );
 }
