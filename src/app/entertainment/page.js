@@ -84,47 +84,7 @@ function page() {
                 </div>
             </section>
 
-<section className='py-10 grid grid-cols-1 lg:grid:col-12'>
-     <div className='lg:col-span-7'>
-                        <div className=" rounded-lg">
-                            <div className="relative">
-                                <Image
-                                    src="/sports/img4.png"
-                                    alt="Cricket players celebrating"
-                                    width={400}
-                                    height={400}
-                                    className="object-cover rounded-xl w-full"
-                                    priority
-                                    style={{ "minHeight": "70vh" }}
-                                />
-                            </div>
-                            <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
-                            <p className="text-base font-semibold text-[#002765] ">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            </p>
-                        </div>
-                    </div>
-                     <div className='lg:col-span-5'>
-                        <div className=" rounded-lg">
-                            <div className="relative">
-                                <Image
-                                    src="/sports/img4.png"
-                                    alt="Cricket players celebrating"
-                                    width={400}
-                                    height={400}
-                                    className="object-cover rounded-xl w-full"
-                                    priority
-                                    style={{ "minHeight": "70vh" }}
-                                />
-                            </div>
-                            <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
-                            <p className="text-base font-semibold text-[#002765] ">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            </p>
-                        </div>
-                    </div>
 
-</section>
 
         </div>
     )
