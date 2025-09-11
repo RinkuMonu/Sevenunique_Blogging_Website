@@ -24,9 +24,9 @@ const LargeCard = ({ imageUrl, text }) => {
       ></div>
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="relative h-full flex items-end justify-center p-4">
-        <h2 className="text-white text-lg font-semibold text-center text-shadow-lg">
+        <p className="text-white text-lg font-semibold text-center text-shadow-lg">
           {text}
-        </h2>
+        </p>
       </div>
     </div>
   );
@@ -64,9 +64,9 @@ export default function BusinessComponent() {
   return (
     <div className="py-4 sm:py-6 lg:py-8 ">
       <div className="">
-        <h1 className="text-3xl font-bold mb-6 text-[#E50914]">
+    <p className="text-3xl underline font-bold text-red-600 mb-6">
           Banking News
-        </h1>
+        </p>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
           {/* Left Sidebar */}

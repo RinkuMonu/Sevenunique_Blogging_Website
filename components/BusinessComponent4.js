@@ -29,7 +29,7 @@ export default function BusinessComponent4() {
 
   return (
     <div className=" py-10">
-      <p className='text-red-600 underline text-3xl mb-5'>Videos </p>
+     <p className="text-3xl underline font-bold text-red-600 mb-6">Videos </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-2">
 
@@ -38,7 +38,7 @@ export default function BusinessComponent4() {
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <div className="w-full h-[50vh]">
               <iframe
-                src="https://www.youtube.com/embed/2FX7OMExh2g?si=5fKwZXM8HsAr7PCh"
+                src="https://www.youtube.com/embed/2FX7OMExpg?si=5fKwZXM8HsAr7PCh"
                 title="Live Breaking News"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -50,9 +50,9 @@ export default function BusinessComponent4() {
 
             {/* Overlay text */}
             <div className="absolute bottom-0 left-0 w-full  p-4">
-              <h2 className="text-white text-lg font-semibold">
+              <p className="text-white text-lg font-semibold">
                 {mainVideo.title}
-              </h2>
+              </p>
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export default function BusinessComponent4() {
               >
                 <div className="relative flex-shrink-0  w-40 h-22 lg:w-52 lg:h-28">
                   <iframe
-                    src="https://www.youtube.com/embed/2FX7OMExh2g?si=5fKwZXM8HsAr7PCh"
+                    src="https://www.youtube.com/embed/2FX7OMExpg?si=5fKwZXM8HsAr7PCh"
                     title="Live Breaking News"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

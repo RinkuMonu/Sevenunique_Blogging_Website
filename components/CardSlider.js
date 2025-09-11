@@ -1,6 +1,7 @@
 
 import React from 'react';
 import FocusSection from './FocusSection';
+import Image from 'next/image';
 
 // Mock data for the articles
 const articles = [
@@ -59,6 +60,11 @@ export default function CardSlider() {
         </div>
 
       <FocusSection/>
+
+            <div className="flex flex-col items-center justify-center  rounded-lg  w-full col-span-2 mt-5">
+                                        
+                                        <Image width={728} height={90} src="/Newimg/header/bottom1.jpg" alt="Ad" className="object-cover h-24 relative adverimg" />
+                                    </div>
       </div>
     </div>
   );

@@ -302,7 +302,7 @@ export default function page() {
 
 
 
-        <section className="py-20">
+        <section className="py-5">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
 
             <div className=" p-4 rounded-lg">
@@ -384,14 +384,20 @@ export default function page() {
               </div>
 
               {/* Column 3 (Advertisement) */}
-              <div className="lg:col-span-1 px-5 flex items-center">
-
-                <Image width={300} height={900} src="/Newimg/header/sidenew.jpg" alt="Ad" className="object-cover min-h-screen  relative adverimg" />
-
-              </div>
+               <div className="lg:w-[300px] lg:flex-shrink-0 px-4 ">
+                   <div className="relative h-full w-full rounded-lg">
+                     <Image
+                       src="/Newimg/header/sidenew.jpg"
+                       alt="Ad"
+                       fill
+                       className="object-cover rounded-lg"
+                     />
+                   </div>
+                 </div>
 
             </div>
           </div>
+ 
         </section>
 
 

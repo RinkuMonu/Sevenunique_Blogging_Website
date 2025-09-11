@@ -41,7 +41,7 @@ export default function HotTopics() {
           <div key={index} className="border-t border-gray-600 py-4">
             {/* Section Header */}
             <div className="flex justify-between items-center mb-3">
-              <h2 className="text-xl font-semibold">{section.title}</h2>
+           <p className="text-3xl underline font-bold text-red-600 mb-6">{section.title}</p>
               <button className="flex items-center text-gray-600 hover:text-red-600 transition-colors">
                 <span>More</span>
                 <ChevronDown />

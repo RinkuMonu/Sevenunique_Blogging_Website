@@ -9,6 +9,8 @@ import ElectionSection from "../../components/Election";
 import TopNews from "../../components/TopNews";
 import MovieReviewSection from "../../components/MovieReview";
 import HotTopics from "../../components/HotTopics";
+import PodcastSection from "../../components/Podcast";
+import SponsoredBrandsSection from "../../components/Sponsored";
 
 export default function Home() {
   return (
@@ -24,6 +26,9 @@ export default function Home() {
         <ElectionSection />
         <TopNews />
         <MovieReviewSection />
+        <PodcastSection />
+        <SponsoredBrandsSection/>
+
         <HotTopics/>
       </div>
 

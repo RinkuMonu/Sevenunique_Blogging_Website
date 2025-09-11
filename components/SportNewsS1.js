@@ -6,7 +6,7 @@ function SportNewsS1({ heading , articles ,newsData }) {
   return (
     <>
           <div>
-                     <p className='text-red-600 underline text-3xl mb-5'>{heading}</p>
+                    <p className="text-3xl underline font-bold text-red-600 mb-6">{heading}</p>
                     <div className="rounded-lg ">
                         <div className="grid grid-cols-1 md:grid-cols-2">
                             <div className="relative h-64 md:h-auto ">
@@ -18,9 +18,9 @@ function SportNewsS1({ heading , articles ,newsData }) {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent rounded-lg"></div>
                                 <div className="absolute bottom-0 left-0 p-6">
-                                    <h2 className="text-white text-2xl font-bold leading-tight">
+                                    <p className="text-white text-2xl font-bold leading-tight">
                                         {featuredArticle.title}
-                                    </h2>
+                                    </p>
                                 </div>
                             </div>
 

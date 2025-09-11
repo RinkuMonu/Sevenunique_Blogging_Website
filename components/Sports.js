@@ -11,7 +11,7 @@ export default function Sports() {
         <>
             <hr className='w-full h-2 ' />
             <hr className='w-full h-2 -mt-1' />
-            <section className="w-full max-w-screen-xl mx-auto px-4 py-12">
+            <section className="w-full max-w-screen-xl mx-auto py-12">
                 <h2 className="text-3xl font-bold text-red-600 mb-6 underline">Sports</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

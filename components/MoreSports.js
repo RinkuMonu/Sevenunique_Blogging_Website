@@ -56,9 +56,9 @@ export default function MoreSports() {
   return (
  
   <>
-        <h2 className="text-3xl sm:text-4xl font-bold text-red-600 mb-8">
+       <p className="text-3xl underline font-bold text-red-600 mb-6">
           More Sports News
-        </h2>
+        </p>
         
         {/* Grid of News Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
