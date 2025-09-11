@@ -25,7 +25,7 @@ function SportNewsS1({ heading , articles ,newsData }) {
                             </div>
 
                             {/* Articles List */}
-                            <div className="p-6 flex flex-col justify-center">
+                            <div className=" p-2 lg:p-6 flex flex-col justify-center">
                                 <ul className="space-y-4">
                                     {listArticles.map((article) => (
                                         <li key={article.id}>

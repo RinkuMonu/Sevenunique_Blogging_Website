@@ -53,7 +53,7 @@ export default function SportNews2({ heading , articles ,newsData }) {
 
     return (
         <>
-            <div className='grid lg:grid-cols-7  py-10 border-t-2 border-b-2 border-black '>
+            <div className='grid lg:grid-cols-7  py-10 border-t border-b border-black '>
                 <div className='lg:col-span-5'>
                <SportNewsS1 heading={heading} articles={articles} newsData={newsData}/>
                 </div>

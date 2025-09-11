@@ -23,8 +23,8 @@ const LargeCard = ({ imageUrl, text }) => {
         style={{ backgroundImage: `url(${imageUrl})` }}
       ></div>
       <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative h-full flex items-center justify-center p-4">
-        <h2 className="text-white text-sm font-semibold text-center text-shadow-lg">
+      <div className="relative h-full flex items-end justify-center p-4">
+        <h2 className="text-white text-lg font-semibold text-center text-shadow-lg">
           {text}
         </h2>
       </div>
@@ -47,17 +47,17 @@ export default function BusinessComponent() {
     { text: "Right card 2: Expert opinions and match predictions", imageUrl: "/sports/img7.png" },
     { text: "Right card 3: Highlights of key sports events", imageUrl: "/sports/img8.png" },
     { text: "Right card 4: Training tips and player fitness updates", imageUrl: "/sports/img9.png" },
- 
+
   ];
 
   const mainCards = [
-    { 
+    {
       imageUrl: "/sports/img6.png",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod" 
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
     },
-    { 
+    {
       imageUrl: "/sports/img7.png",
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip" 
+      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
     },
   ];
 
@@ -65,10 +65,10 @@ export default function BusinessComponent() {
     <div className="py-4 sm:py-6 lg:py-8 ">
       <div className="">
         <h1 className="text-3xl font-bold mb-6 text-[#E50914]">
-          Sports Highlights
+          Banking News
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-          
+
           {/* Left Sidebar */}
           <div className="col-span-1 flex flex-col gap-6">
             {leftCards.map((card, index) => (
@@ -77,13 +77,13 @@ export default function BusinessComponent() {
           </div>
 
           {/* Main Content */}
-<div className="col-span-1 lg:col-span-2 flex flex-col gap-6">
-  {mainCards.map((card, index) => (
-    <div className="h-[13.5rem]" key={index}>
-      <LargeCard key={`main-${index}`} imageUrl={card.imageUrl} text={card.text} />
-    </div>
-  ))}
-</div>
+          <div className="col-span-1 lg:col-span-2 flex flex-col gap-6">
+            {mainCards.map((card, index) => (
+              <div className="h-[13.5rem]" key={index}>
+                <LargeCard key={`main-${index}`} imageUrl={card.imageUrl} text={card.text} />
+              </div>
+            ))}
+          </div>
 
 
           {/* Right Sidebar */}

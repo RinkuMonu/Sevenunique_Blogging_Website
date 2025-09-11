@@ -12,14 +12,14 @@ import HotTopics from "../../../components/HotTopics";
 import NowPlaying from "../../../components/NowPlaying";
 
 const images = [
-  "/sports/img1.png",  "/sports/img2.png",  "/sports/img-3.png",  "/sports/img1.png",  "/sports/img2.png",
+  "/sports/img1.png", "/sports/img2.png", "/sports/img-3.png", "/sports/img1.png", "/sports/img2.png",
 ];
 
 const cricketNewsData = [
   {
     id: 1,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-    imageUrl:   "/sports/img4.png",
+    imageUrl: "/sports/img4.png",
   },
   { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in' },
   { id: 3, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in' },
@@ -43,55 +43,56 @@ const articles = [
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
     date: 'Sept 3, 2025',
-       imageUrl: '/sports/img8.png'},
+    imageUrl: '/sports/img8.png'
+  },
   {
     id: 3,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
     date: 'Sept 3, 2025',
-        imageUrl: '/sports/img7.png'
+    imageUrl: '/sports/img7.png'
   },
   {
     id: 4,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img8.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img8.png'
   },
   {
     id: 5,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img6.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img6.png'
   },
   {
     id: 6,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img7.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img7.png'
   },
   {
     id: 7,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img8.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img8.png'
   },
   {
     id: 8,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img6.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img6.png'
   },
   {
     id: 9,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img8.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img8.png'
   },
   {
     id: 10,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img7.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img7.png'
   },
 ];
 
@@ -152,36 +153,6 @@ const ArticleCard = ({ article }) => (
   </div>
 );
 
-// Advertisement Component
-const Advertisement = () => (
-  <div className=" p-4 bg-gray-400 rounded-lg h-full flex flex-col items-center justify-around text-center">
-    <div>
-      <p className="text-gray-500 text-xs">Advertisement</p>
-      <p className="text-gray-500 text-sm mb-8">160*600</p>
-    </div>
-    <div className="flex flex-col items-center space-y-8">
-      <div className="flex space-x-2">
-        <div className="flex flex-col items-center">
-          <div className="text-2xl font-bold text-gray-700">7U</div>
-          <p className="text-gray-600 font-semibold text-xs mt-1">SEVENUNIQUE</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="text-2xl font-bold text-gray-700">7U</div>
-          <p className="text-gray-600 font-semibold text-xs mt-1">SEVENUNIQUE</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="text-2xl font-bold text-gray-700">7U</div>
-          <p className="text-gray-600 font-semibold text-xs mt-1">SEVENUNIQUE</p>
-        </div>
-      </div>
-      <div>
-        <div className="text-7xl font-bold text-gray-700">7U</div>
-        <p className="text-gray-600 font-semibold mt-2">SEVENUNIQUE</p>
-      </div>
-    </div>
-    <div></div>
-  </div>
-);
 
 export default function page() {
   const [cardsToShow, setCardsToShow] = useState(3.5);
@@ -258,13 +229,13 @@ export default function page() {
   const column1Articles = articles.slice(0, 5);
   const column2Articles = articles.slice(5, 10);
 
- const realIndex = (currentIndex - cardsToShow + images.length) % images.length;
+  const realIndex = (currentIndex - cardsToShow + images.length) % images.length;
   const offset = Number.isInteger(cardsToShow) ? 0 : 100 / (cardsToShow * 2);
 
   return (
     <>
       <div className="lg:px-24 px-4 py-5">
-       <NowPlaying/>
+        <NowPlaying />
 
         <style>{`
         @keyframes marquee {
@@ -279,57 +250,56 @@ export default function page() {
 
         {/* Slider */}
         <div
-        className="relative w-full flex flex-col justify-center items-center overflow-hidden py-4 bg-cover bg-center bg-no-repeat mt-5 rounded-2xl"
-        style={{ backgroundImage: "url(/sports/slider-bg.png)" }}
-      >
-        <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl">
-          <div
-            ref={transitionRef}
-            className={`flex ${transitionEnabled ? "transition-transform duration-500 ease-in-out" : ""}`}
-            style={{
-              transform: `translateX(calc(-${(100 / cardsToShow) * currentIndex}% + ${offset}%))`,
-            }}
-          >
-            {extendedImages.map((src, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 px-2"
-                style={{ width: `${100 / cardsToShow}%` }}
-              >
-                <div className="rounded-xl overflow-hidden shadow-md">
-                  <img src={src} alt={`Slide ${index}`} className="w-full h-64 object-cover" />
+          className="relative w-full flex flex-col justify-center items-center overflow-hidden py-4 bg-cover bg-center bg-no-repeat mt-5 rounded-2xl"
+          style={{ backgroundImage: "url(/sports/slider-bg.png)" }}
+        >
+          <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl">
+            <div
+              ref={transitionRef}
+              className={`flex ${transitionEnabled ? "transition-transform duration-500 ease-in-out" : ""}`}
+              style={{
+                transform: `translateX(calc(-${(100 / cardsToShow) * currentIndex}% + ${offset}%))`,
+              }}
+            >
+              {extendedImages.map((src, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 px-2"
+                  style={{ width: `${100 / cardsToShow}%` }}
+                >
+                  <div className="rounded-xl overflow-hidden shadow-md">
+                    <img src={src} alt={`Slide ${index}`} className="w-full h-64 object-cover" />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          {/* 🔴 Controls */}
+          <div className="mx-auto mt-6 flex items-center">
+            {/* Dots */}
+            <div className="flex space-x-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index + cardsToShow)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${realIndex === index ? "bg-white scale-125" : "bg-white/50"
+                    }`}
+                />
+              ))}
+            </div>
+            {/* Arrows */}
+            <div className="flex justify-end space-x-2 pl-4">
+              <button onClick={prevSlide} className="p-1.5 rounded-full border border-white text-white hover:bg-gray-100">
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+              <button onClick={nextSlide} className="p-1.5 rounded-full border border-white text-white hover:bg-gray-100">
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* 🔴 Controls */}
-        <div className="mx-auto mt-6 flex items-center">
-          {/* Dots */}
-          <div className="flex space-x-2">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index + cardsToShow)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  realIndex === index ? "bg-white scale-125" : "bg-white/50"
-                }`}
-              />
-            ))}
-          </div>
-          {/* Arrows */}
-          <div className="flex justify-end space-x-2 pl-4">
-            <button onClick={prevSlide} className="p-1.5 rounded-full border border-white text-white hover:bg-gray-100">
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-            <button onClick={nextSlide} className="p-1.5 rounded-full border border-white text-white hover:bg-gray-100">
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </div>
-    
 
 
         <section className="py-20">
@@ -354,7 +324,7 @@ export default function page() {
               <div className=" p-4 rounded-lg">
                 <div className="relative">
                   <img
-   src="/sports/img6.png"
+                    src="/sports/img6.png"
                     alt="Cricket players celebrating"
                     className="w-full h-50 object-cover rounded-lg mb-4"
                     onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
@@ -368,7 +338,7 @@ export default function page() {
               <div className=" p-4 rounded-lg">
                 <div className="relative">
                   <img
-                      src="/sports/img8.png"
+                    src="/sports/img8.png"
                     alt="Cricket players celebrating"
                     className="w-full h-50 object-cover rounded-lg mb-4"
                     onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
@@ -381,14 +351,10 @@ export default function page() {
               </div>
             </div>
             <div className=" p-4 rounded-lg flex flex-col justify-center">
-              <div className="relative bg-gray-400 rounded">
-                <img
-                  src=" "
-                  alt="Cricket players celebrating"
-                  className="w-full min-h-[55vh] object-cover rounded-lg mb-4"
-                  onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
-                />
+              <div className="flex flex-col items-center justify-center  rounded-lg  w-full">
+                <Image width={300} height={250} src="/Newimg/header/leftside2.jpg" alt="Ad" className="object-cover h-64 relative adverimg" />
               </div>
+
               <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
               <h2 className="text-lg font-semibold text-gray-800 leading-tight">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -400,7 +366,7 @@ export default function page() {
 
 
         <section className=" py-4 ">
-          <div className=" py-10 border-b-2 border-t-2 border-black">
+          <div className=" py-10 border-b border-t border-black">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
 
               {/* Column 1 */}
@@ -418,8 +384,10 @@ export default function page() {
               </div>
 
               {/* Column 3 (Advertisement) */}
-              <div className="hidden lg:block col-span-1">
-                <Advertisement />
+              <div className="lg:col-span-1 px-5 flex items-center">
+
+                <Image width={300} height={900} src="/Newimg/header/sidenew.jpg" alt="Ad" className="object-cover min-h-screen  relative adverimg" />
+
               </div>
 
             </div>
@@ -433,9 +401,9 @@ export default function page() {
         <FeaturedNewsCategory heading={"Football news"} articles={cricketNewsData} newsData={newsData} />
         <SportNews2 heading={"MMA news"} articles={articles} newsData={newsData} />
         <FeaturedNewsCategory heading={"Asian Games"} articles={cricketNewsData} newsData={newsData} />
-        <VisualStories visualStoriesData={visualStoriesData}/>
-        <MoreSports/>
-        <HotTopics/>
+        <VisualStories visualStoriesData={visualStoriesData} />
+        <MoreSports />
+        <HotTopics />
       </div>
     </>
   );
