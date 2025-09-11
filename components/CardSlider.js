@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Mock data for the articles - added more for the slider
 const articles = [
@@ -73,9 +73,25 @@ const ArticleTickerCard = ({ article }) => (
 // Main App Component
 export default function CardSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3; // Number of items to show at once on large screens
+const [itemsPerPage, setItemsPerPage] = useState(1);
   const canGoNext = currentIndex < articles.length - itemsPerPage;
   const canGoPrev = currentIndex > 0;
+
+  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 425) {
+        setItemsPerPage(1);
+      } else if (window.innerWidth < 768) {
+        setItemsPerPage(2);
+      } else {
+        setItemsPerPage(3);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const nextSlide = () => {
     if (canGoNext) {

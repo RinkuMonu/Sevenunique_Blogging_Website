@@ -13,17 +13,14 @@ export default function FeaturedNewsCategory({ heading , articles ,newsData }) {
         );
     }
 
-    // The first article is featured, the rest are in the list
-    const featuredArticle = articles[0];
-    const listArticles = articles.slice(1, 7); // Show up to 6 articles in the list
 
     return (
         <>
-            <div className='grid lg:grid-cols-5 px-4 py-10 border-t-2 border-b-2 border-black'>
-                <div className='col-span-4'>
+            <div className='grid lg:grid-cols-5 py-10 border-t-2 border-b-2 border-black'>
+                <div className='lg:col-span-4'>
                         <SportNewsS1 heading={heading} articles={articles} newsData={newsData}/>
                 </div>
-                <div className="col-span-1 ">
+                <div className="lg:col-span-1 ">
             <div className="max-h-screen rounded-lg shadow-md">
                 <img
                     src="/ad.png"
