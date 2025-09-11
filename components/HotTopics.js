@@ -38,7 +38,7 @@ export default function HotTopics() {
     <div className=" font-sans text-gray-800 py-10">
      
         {topicSections.map((section, index) => (
-          <div key={index} className="border-t-2 border-gray-600 py-4">
+          <div key={index} className="border-t border-gray-600 py-4">
             {/* Section Header */}
             <div className="flex justify-between items-center mb-3">
               <h2 className="text-xl font-semibold">{section.title}</h2>
