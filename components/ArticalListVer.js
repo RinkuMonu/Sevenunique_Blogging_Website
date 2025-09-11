@@ -2,7 +2,7 @@ import React from "react";
 
 const ArticleList = ({articlesV}) => {
   return (
-    <div className="max-w-2xl mx-auto p-4">
+    <div className="ps-4">
       <div className="space-y-4">
         {articlesV.map((article) => (
           <div

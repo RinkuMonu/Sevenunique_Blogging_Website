@@ -15,10 +15,8 @@ export default function VisualStories({visualStoriesData}) {
 
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 ">
-
-        <div className="mt-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-4 border-red-600 inline-block pr-4">Visual Stories</h2>
+    <div className="py-10">
+            <h3 className="text-2xl font-bold text-red-600 mb-4 border-b-4 border-red-600 inline-block">Visual Stories</h3>
             <div className="relative">
                 <div className="overflow-hidden">
                     <div 
@@ -26,8 +24,8 @@ export default function VisualStories({visualStoriesData}) {
                         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                     >
                         {visualStoriesData.map((story) => (
-                            <div key={story.id} className="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 p-2">
-                                <div className="relative rounded-lg overflow-hidden h-96 shadow-lg">
+                            <div key={story.id} className="flex-shrink-0 w-full  md:w-1/2 lg:w-1/4 p-2">
+                                <div className="relative rounded-lg overflow-hidden h-[70vh] shadow-lg">
                                     <img src={story.imageUrl} alt={story.title} className="w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
                                     <div className="absolute bottom-0 left-0 p-4">
@@ -49,7 +47,7 @@ export default function VisualStories({visualStoriesData}) {
                 ))}
             </div>
         </div>
-      </div>
+ 
 
   );
 }

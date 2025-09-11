@@ -16,7 +16,7 @@ function SportNewsS1({ heading , articles ,newsData }) {
                                     className="absolute inset-0 w-full h-full object-cover rounded-lg"
                                     onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image'; }}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent rounded-lg"></div>
                                 <div className="absolute bottom-0 left-0 p-6">
                                     <h2 className="text-white text-2xl font-bold leading-tight">
                                         {featuredArticle.title}
@@ -25,7 +25,7 @@ function SportNewsS1({ heading , articles ,newsData }) {
                             </div>
 
                             {/* Articles List */}
-                            <div className="p-6 flex flex-col justify-center">
+                            <div className=" p-2 lg:p-6 flex flex-col justify-center">
                                 <ul className="space-y-4">
                                     {listArticles.map((article) => (
                                         <li key={article.id}>
@@ -39,11 +39,11 @@ function SportNewsS1({ heading , articles ,newsData }) {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 ">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 py-6 ">
                         {newsData.map((item) => (
                             <div
                                 key={item.id}
-                                className=" overflow-hidden"
+                                className=" overflow-hidden "
                             >
                                 {/* Image */}
                                 <img

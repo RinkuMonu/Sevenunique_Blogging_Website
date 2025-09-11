@@ -9,18 +9,17 @@ import SportNews2 from "../../../components/SportNews2";
 import VisualStories from "../../../components/VisualStories";
 import MoreSports from "../../../components/MoreSports";
 import HotTopics from "../../../components/HotTopics";
+import NowPlaying from "../../../components/NowPlaying";
 
 const images = [
-  "/sports/img1.png",  "/sports/img2.png",  "/sports/img-3.png",  "/sports/img1.png",  "/sports/img2.png",
+  "/sports/img1.png", "/sports/img2.png", "/sports/img-3.png", "/sports/img1.png", "/sports/img2.png",
 ];
 
-const bannerText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 const cricketNewsData = [
   {
     id: 1,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-    imageUrl:   "/sports/img4.png",
+    imageUrl: "/sports/img4.png",
   },
   { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in' },
   { id: 3, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in' },
@@ -44,55 +43,56 @@ const articles = [
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
     date: 'Sept 3, 2025',
-       imageUrl: '/sports/img8.png'},
+    imageUrl: '/sports/img8.png'
+  },
   {
     id: 3,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
     date: 'Sept 3, 2025',
-        imageUrl: '/sports/img7.png'
+    imageUrl: '/sports/img7.png'
   },
   {
     id: 4,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img8.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img8.png'
   },
   {
     id: 5,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img6.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img6.png'
   },
   {
     id: 6,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img7.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img7.png'
   },
   {
     id: 7,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img8.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img8.png'
   },
   {
     id: 8,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img6.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img6.png'
   },
   {
     id: 9,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img8.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img8.png'
   },
   {
     id: 10,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
     category: 'Sports',
-    date: 'Sept 3, 2025',    imageUrl: '/sports/img7.png'
+    date: 'Sept 3, 2025', imageUrl: '/sports/img7.png'
   },
 ];
 
@@ -139,7 +139,7 @@ const ArticleCard = ({ article }) => (
     <img
       src={article.imageUrl}
       alt={article.title}
-      className="w-64 h-32 object-cover rounded-md"
+      className="w-36 md:w-64 md:h-32 object-cover rounded-md"
       onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/112x80/cccccc/ffffff?text=Error'; }}
     />
     <div>
@@ -153,39 +153,9 @@ const ArticleCard = ({ article }) => (
   </div>
 );
 
-// Advertisement Component
-const Advertisement = () => (
-  <div className=" p-4 bg-gray-400 rounded-lg h-full flex flex-col items-center justify-around text-center">
-    <div>
-      <p className="text-gray-500 text-xs">Advertisement</p>
-      <p className="text-gray-500 text-sm mb-8">160*600</p>
-    </div>
-    <div className="flex flex-col items-center space-y-8">
-      <div className="flex space-x-2">
-        <div className="flex flex-col items-center">
-          <div className="text-2xl font-bold text-gray-700">7U</div>
-          <p className="text-gray-600 font-semibold text-xs mt-1">SEVENUNIQUE</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="text-2xl font-bold text-gray-700">7U</div>
-          <p className="text-gray-600 font-semibold text-xs mt-1">SEVENUNIQUE</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="text-2xl font-bold text-gray-700">7U</div>
-          <p className="text-gray-600 font-semibold text-xs mt-1">SEVENUNIQUE</p>
-        </div>
-      </div>
-      <div>
-        <div className="text-7xl font-bold text-gray-700">7U</div>
-        <p className="text-gray-600 font-semibold mt-2">SEVENUNIQUE</p>
-      </div>
-    </div>
-    <div></div>
-  </div>
-);
 
 export default function page() {
-  const cardsToShow = 3.5;
+  const [cardsToShow, setCardsToShow] = useState(3.5);
   const [currentIndex, setCurrentIndex] = useState(cardsToShow); // start after clones
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const transitionRef = useRef(null);
@@ -226,6 +196,26 @@ export default function page() {
     }
   }, [transitionEnabled]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardsToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsToShow(2);
+      } else {
+        setCardsToShow(3.5);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Reset index on cardsToShow change
+  useEffect(() => {
+    setCurrentIndex(cardsToShow);
+  }, [cardsToShow]);
+
   // Auto play
   useEffect(() => {
     autoplayRef.current = setInterval(() => {
@@ -239,40 +229,13 @@ export default function page() {
   const column1Articles = articles.slice(0, 5);
   const column2Articles = articles.slice(5, 10);
 
-  // Correct dot index
   const realIndex = (currentIndex - cardsToShow + images.length) % images.length;
+  const offset = Number.isInteger(cardsToShow) ? 0 : 100 / (cardsToShow * 2);
 
   return (
     <>
-      <div className="px-24 py-5">
-        <div className="w-full bg-red-600 rounded-2xl p-2 flex items-center space-x-4 overflow-hidden border-2 border-white/30 shadow-2xl">
-          {/* "Now Playing" Button */}
-          <div className="flex-shrink-0 bg-white text-red-600 rounded-full px-4 py-1.5 flex items-center space-x-2.5 shadow-md">
-            <div className="w-7 h-7 bg-red-600 rounded-md flex items-center justify-center">
-              <svg
-                className="w-4 h-4 text-white ml-0.5"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M3 1.5L13 8L3 14.5V1.5Z" />
-              </svg>
-            </div>
-            <span className="font-semibold text-sm text-gray-800">
-              Now Playing
-            </span>
-          </div>
-
-          {/* Scrolling Text */}
-          <div className="flex-grow overflow-hidden whitespace-nowrap relative h-6">
-            <div className="absolute inset-0 flex items-center animate-marquee">
-              <p className="text-white text-md">
-                <span className="mx-4">{bannerText}</span>
-                <span className="mx-4">{bannerText}</span>
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="lg:px-24 px-4 py-5">
+        <NowPlaying />
 
         <style>{`
         @keyframes marquee {
@@ -287,21 +250,15 @@ export default function page() {
 
         {/* Slider */}
         <div
-          className="relative w-full  flex flex-col justify-center item-center overflow-hidden py-4 bg-cover bg-center bg-no-repeat mt-5 rounded-2xl"
-          style={{
-            backgroundImage: "url( /sports/slider-bg.png)"
-          }}
+          className="relative w-full flex flex-col justify-center items-center overflow-hidden py-4 bg-cover bg-center bg-no-repeat mt-5 rounded-2xl"
+          style={{ backgroundImage: "url(/sports/slider-bg.png)" }}
         >
-          {/* Slider */}
-          <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl ">
+          <div className="w-full max-w-6xl mx-auto overflow-hidden rounded-2xl">
             <div
               ref={transitionRef}
-              className={`flex ${transitionEnabled ? "transition-transform duration-500 ease-in-out" : ""
-                }`}
+              className={`flex ${transitionEnabled ? "transition-transform duration-500 ease-in-out" : ""}`}
               style={{
-                // Shift by (index * 100) but subtract half-card width once
-                transform: `translateX(calc(-${(100 / cardsToShow) * currentIndex}% + ${100 / (cardsToShow * 2)
-                  }%))`,
+                transform: `translateX(calc(-${(100 / cardsToShow) * currentIndex}% + ${offset}%))`,
               }}
             >
               {extendedImages.map((src, index) => (
@@ -311,21 +268,16 @@ export default function page() {
                   style={{ width: `${100 / cardsToShow}%` }}
                 >
                   <div className="rounded-xl overflow-hidden shadow-md">
-                    <img
-                      src={src}
-                      alt={`Slide ${index}`}
-                      className="w-full h-64 object-cover"
-                    />
+                    <img src={src} alt={`Slide ${index}`} className="w-full h-64 object-cover" />
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-
-  <div className="mx-auto">
-          
-          <div className="flex   mt-6 space-y-4">
+          {/* 🔴 Controls */}
+          <div className="mx-auto mt-6 flex items-center">
+            {/* Dots */}
             <div className="flex space-x-2">
               {images.map((_, index) => (
                 <button
@@ -336,40 +288,22 @@ export default function page() {
                 />
               ))}
             </div>
-
-
-                <div className="flex justify-end space-x-2 pl-4">
-            <button
-              onClick={prevSlide}
-           
-              className="p-1.5 rounded-full border border-white text-white  disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={nextSlide}
-           
-              className="p-1.5 rounded-full border border-white text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
-            >
-              <ArrowRight className="w-4 h-4" />
-            </button>
+            {/* Arrows */}
+            <div className="flex justify-end space-x-2 pl-4">
+              <button onClick={prevSlide} className="p-1.5 rounded-full border border-white text-white hover:bg-gray-100">
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+              <button onClick={nextSlide} className="p-1.5 rounded-full border border-white text-white hover:bg-gray-100">
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
-         
-
-          
-
-          </div>
-    </div>
         </div>
 
 
 
-
-
-
-
         <section className="py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
 
             <div className=" p-4 rounded-lg">
               <div className="relative">
@@ -390,7 +324,7 @@ export default function page() {
               <div className=" p-4 rounded-lg">
                 <div className="relative">
                   <img
-   src="/sports/img6.png"
+                    src="/sports/img6.png"
                     alt="Cricket players celebrating"
                     className="w-full h-50 object-cover rounded-lg mb-4"
                     onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
@@ -404,7 +338,7 @@ export default function page() {
               <div className=" p-4 rounded-lg">
                 <div className="relative">
                   <img
-                      src="/sports/img8.png"
+                    src="/sports/img8.png"
                     alt="Cricket players celebrating"
                     className="w-full h-50 object-cover rounded-lg mb-4"
                     onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
@@ -417,14 +351,10 @@ export default function page() {
               </div>
             </div>
             <div className=" p-4 rounded-lg flex flex-col justify-center">
-              <div className="relative bg-gray-400 rounded">
-                <img
-                  src=" "
-                  alt="Cricket players celebrating"
-                  className="w-full min-h-[55vh] object-cover rounded-lg mb-4"
-                  onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
-                />
+              <div className="flex flex-col items-center justify-center  rounded-lg  w-full">
+                <Image width={300} height={250} src="/Newimg/header/leftside2.jpg" alt="Ad" className="object-cover h-64 relative adverimg" />
               </div>
+
               <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
               <h2 className="text-lg font-semibold text-gray-800 leading-tight">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -436,7 +366,7 @@ export default function page() {
 
 
         <section className=" py-4 ">
-          <div className="max-w-7xl mx-auto py-10 border-b-2 border-t-2 border-black">
+          <div className=" py-10 border-b border-t border-black">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
 
               {/* Column 1 */}
@@ -454,8 +384,10 @@ export default function page() {
               </div>
 
               {/* Column 3 (Advertisement) */}
-              <div className="hidden lg:block col-span-1">
-                <Advertisement />
+              <div className="lg:col-span-1 px-5 flex items-center">
+
+                <Image width={300} height={900} src="/Newimg/header/sidenew.jpg" alt="Ad" className="object-cover min-h-screen  relative adverimg" />
+
               </div>
 
             </div>
@@ -469,9 +401,9 @@ export default function page() {
         <FeaturedNewsCategory heading={"Football news"} articles={cricketNewsData} newsData={newsData} />
         <SportNews2 heading={"MMA news"} articles={articles} newsData={newsData} />
         <FeaturedNewsCategory heading={"Asian Games"} articles={cricketNewsData} newsData={newsData} />
-        <VisualStories visualStoriesData={visualStoriesData}/>
-        <MoreSports/>
-        <HotTopics/>
+        <VisualStories visualStoriesData={visualStoriesData} />
+        <MoreSports />
+        <HotTopics />
       </div>
     </>
   );

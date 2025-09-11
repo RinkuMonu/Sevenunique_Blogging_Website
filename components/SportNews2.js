@@ -32,7 +32,12 @@ const articlesV = [
     title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
     image:
       "https://images.unsplash.com/photo-1601314167099-ea6c5b2be501?q=80&w=400&auto=format&fit=crop",
-  },
+  }, {
+    id: 6,
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in",
+    image:
+      "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?q=80&w=400&auto=format&fit=crop",
+  }
 ];
 
 export default function SportNews2({ heading , articles ,newsData }) {
@@ -48,11 +53,11 @@ export default function SportNews2({ heading , articles ,newsData }) {
 
     return (
         <>
-            <div className='grid lg:grid-cols-5 px-4 py-10 border-t-2 border-b-2 border-black'>
-                <div className='col-span-4'>
+            <div className='grid lg:grid-cols-7  py-10 border-t border-b border-black '>
+                <div className='lg:col-span-5'>
                <SportNewsS1 heading={heading} articles={articles} newsData={newsData}/>
                 </div>
-                <div className="col-span-1 ">
+                <div className="lg:col-span-2 flex flex-col justify-center">
           <ArticleList articlesV={articlesV}/>
           </div>
             </div>
