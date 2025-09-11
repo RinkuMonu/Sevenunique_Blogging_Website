@@ -2,6 +2,24 @@
 import React from 'react'
 import NowPlaying from '../../../components/NowPlaying'
 import Image from 'next/image';
+import Entertenment1 from '../../../components/Entertenment1';
+import EntertainmentGrid from '../../../components/EntertainmentGrid';
+
+
+const cardData = [
+  { id: 1, imageUrl: 'sports/img1.png', title: 'Exploring Mountain Vistas and Scenic Trails' },
+  { id: 2, imageUrl: 'sports/img2.png', title: 'A Deep Dive into Modern Architectural Marvels' },
+  { id: 3, imageUrl: 'sports/img3.png', title: 'The Subtle Art of Minimalist Photography' },
+  { id: 4, imageUrl: 'sports/img4.png', title: 'Urban Exploration: Discovering Hidden City Gems' },
+  { id: 5, imageUrl: 'sports/img5.png', title: 'A Culinary Journey Through International Cuisines' },
+  { id: 6, imageUrl: 'sports/img6.png', title: 'The Innovative Future of Sustainable Technology' },
+  { id: 7, imageUrl: 'sports/img7.png', title: 'Classic Literature That Continues to Shape Our World' },
+  { id: 8, imageUrl: 'sports/img8.png', title: 'Adventures in the Wild: An Essential Survival Guide' },
+  { id: 9, imageUrl: 'sports/img9.png', title: 'Understanding the Psychology of Colors in Design' },
+  { id: 10, imageUrl: 'sports/img10.png', title: 'Mastering the Intricate Craft of Digital Art' },
+  { id: 11, imageUrl: 'sports/img11.png', title: 'A Thrilling Look at the World of Extreme Sports' },
+  { id: 12, imageUrl: 'sports/img12.png', title: 'Uncovering the Secrets of Ancient Civilizations' },
+];
 
 function page() {
     return (
@@ -86,6 +104,9 @@ function page() {
 
 
 
+<Entertenment1/>
+ <EntertainmentGrid heading="Latest Movie News" data={cardData} />
+  <EntertainmentGrid heading="Photos" data={cardData} />
         </div>
     )
 }

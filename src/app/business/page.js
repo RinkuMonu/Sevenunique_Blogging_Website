@@ -68,7 +68,7 @@ function page() {
 <BusinessComponent2/>
 <BusinessComponent3/>
 
-<FeaturedNewsCategory heading={"India Business News"} articles={cricketNewsData} newsData={newsData}  ExtraComponent={FocusSection}/>
+<FeaturedNewsCategory heading={"Economy "} articles={cricketNewsData} newsData={newsData}  ExtraComponent={FocusSection}/>
      <VisualStories visualStoriesData={visualStoriesData}/>
      <BusinessComponent4/>
 <HotTopics/>
