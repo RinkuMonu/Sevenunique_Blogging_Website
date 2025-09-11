@@ -50,7 +50,7 @@ export default function MovieReviewSection() {
     ];
 
     return (
-        <div className="px-6 py-8 bg-white">
+        <div className="py-8 bg-white">
             <h2 className="text-3xl font-bold text-red-600 mb-6 underline">
                 Movie review
             </h2>
@@ -116,6 +116,8 @@ export default function MovieReviewSection() {
                     <MdKeyboardArrowRight className="text-white" size={24} />
                 </button>
             </Swiper>
+            <hr className='w-full h-2 mt-8' />
+            <hr className='w-full h-2 -mt-1' />
         </div>
     );
 }

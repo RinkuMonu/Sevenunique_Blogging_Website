@@ -5,7 +5,7 @@ import FocusSection from "./FocusSection";
 export default function ElectionSection() {
     return (
         <div className="py-8 bg-white">
-            <h2 className="text-2xl font-bold text-red-600 mb-6">Election</h2>
+            <h2 className="text-3xl underline font-bold text-red-600 mb-6">Election</h2>
             <div className="flex flex-col lg:flex-row gap-6">
                 {/* Main Content */}
                 <div className="lg:w-2/3 w-full">
