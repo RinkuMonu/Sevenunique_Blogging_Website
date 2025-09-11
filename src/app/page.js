@@ -1,8 +1,10 @@
-import Image from "next/image";
 import HeroSection from "../../components/HeroSection";
 import TopNewsSection from "../../components/TopNewsSection";
 import AdvertisementSection from "../../components/AdvertisementSection";
 import Sports from "../../components/Sports";
+import BusinessSection from "../../components/BusinessSection";
+import AstrologySection from "../../components/AstrologySection";
+import LifestyleSection from "../../components/LifestyleSection";
 
 export default function Home() {
   return (
@@ -12,6 +14,9 @@ export default function Home() {
         <TopNewsSection />
         <AdvertisementSection />
         <Sports />
+        <BusinessSection />
+        <AstrologySection />
+        <LifestyleSection />
       </div>
 
     </>
