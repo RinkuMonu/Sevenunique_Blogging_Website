@@ -6,9 +6,9 @@ const bannerText =
 
 function NowPlaying() {
   return (
-     <div className="w-full bg-red-600 rounded-2xl p-2 flex items-center space-x-4 overflow-hidden border-2 border-white/30 shadow-2xl">
+     <div className="w-full bg-red-600 rounded-2xl p-2 flex items-center space-x-4 my-6 overflow-hidden border-2 border-white/30 ">
           {/* "Now Playing" Button */}
-          <div className="flex-shrink-0 bg-white text-red-600 rounded-full px-4 py-1.5 flex items-center space-x-2.5 shadow-md">
+          <div className="flex-shrink-0 bg-white text-red-600 rounded-full px-4 py-1.5 flex items-center space-x-2.5  cursor-pointer shadow-md">
             <div className="w-7 h-7 bg-red-600 rounded-md flex items-center justify-center">
               <svg
                 className="w-4 h-4 text-white ml-0.5"

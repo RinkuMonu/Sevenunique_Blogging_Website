@@ -4,22 +4,27 @@ import Image from "next/image";
 import TechMobile from "../../../components/TechMobile";
 import LaptopPCSection from "../../../components/LaptopPCSection";
 import GamesSection from "../../../components/GamesSection";
+import TechTips from "../../../components/TechTips";
+import VideosSection from "../../../components/TechVideos";
+import MoreStories from "../../../components/MoreStories";
+import SponsoredBrandsSection from "../../../components/Sponsored";
+import HotTopics from "../../../components/HotTopics";
+import NowPlaying from "../../../components/NowPlaying";
 
 
 export default function NewsSection() {
   return (
     <>
     <div className="px-24">
-
+    <NowPlaying />
       <section className="max-w-7xl mx-auto py-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Section */}
         <div className="lg:col-span-9 space-y-6">
           {/* Header + Top Advertisement */}
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <h2 className="text-2xl font-bold text-red-600 underline mb-6">Tech News</h2>
-            <div className="bg-[#D9D9D9] text-gray-700 text-center w-[468px] h-[60px] flex flex-col items-center justify-center rounded-md">
-              <span className="font-medium text-lg">Advertisement</span>
-              <span className="font-extrabold text-lg">468*60</span>
+            <div className="bg-[#D9D9D9] text-gray-700 text-center w-[500px] h-[70px] flex flex-col items-center justify-center rounded-md">
+              <Image src="/Newimg/header/bottom1.jpg" alt="adver" width={468} height={60} className="w-[500px] h-[70px] object-cover rounded-md" />
             </div>
           </div>
 
@@ -81,8 +86,8 @@ export default function NewsSection() {
 
         {/* Right Sidebar */}
         <aside className="lg:col-span-3 flex flex-col items-center space-y-6">
-          <div className="bg-[#D9D9D9] text-gray-700 w-[160px] h-[600px] flex items-center justify-center rounded-md text-sm">
-            Advertisement <br /> 160*600
+          <div className="bg-[#D9D9D9] text-gray-700 w-[250px] h-[600px] flex items-center justify-center rounded-md text-sm">
+           <Image src="/Newimg/header/sidenew.jpg" className="w-[250px] h-[630px] object-cover rounded-md" alt="sidenews" width={160} height={600} />
           </div>
           {/* <div className="flex flex-col items-center space-y-4">
           <Image
@@ -107,6 +112,11 @@ export default function NewsSection() {
       <TechMobile />
       <LaptopPCSection/>
       <GamesSection/>
+      <TechTips />
+      <VideosSection />
+      <MoreStories />
+      <SponsoredBrandsSection/>
+      <HotTopics />
       </div>
 
     </>
