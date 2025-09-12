@@ -17,20 +17,17 @@ export default function HoroscopeSection() {
     { sign: "VIRGO", img: "/Newimg/Astrology/2.png" },
 
   ];
-  
+
   return (
     <section className="max-w-7xl mx-auto py-8">
-      {/* Section Title */}
-      
-      {/* Advertisement */}
       <div className="flex justify-between mb-4">
-      <h1 className="text-3xl font-bold text-red-600 underline underline-offset-2 mb-2">Today’s Horoscope</h1>
+        <h1 className="text-3xl font-bold text-red-600 underline underline-offset-2 mb-2">Today’s Horoscope</h1>
 
-      <div className="bg-[#D9D9D9] text-gray-700 text-center w-[500px] h-[70px] flex flex-col items-center justify-center rounded-md">
-              <Image src="/Newimg/header/bottom1.jpg" alt="adver" width={468} height={60} className="w-[500px] h-[70px] object-cover rounded-md" />
-            </div>
+        <div className="bg-[#D9D9D9] text-gray-700 text-center w-[500px] h-[70px] flex flex-col items-center justify-center rounded-md">
+          <Image src="/Newimg/header/bottom1.jpg" alt="adver" width={468} height={60} className="w-[500px] h-[70px] object-cover rounded-md" />
+        </div>
       </div>
-      
+
       {/* Horoscope Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5">
         {horoscopes.map((h, idx) => (

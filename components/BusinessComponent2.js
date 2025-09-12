@@ -41,6 +41,8 @@ const RightColumnCard = () => {
 export default function BusinessComponent2() {
     return (
         <div className="py-10 border-b ">
+            <h3 className="text-3xl font-bold text-red-600 mb-4 border-b-4 border-red-600 inline-block">International Business news</h3>
+
             <div className="grid grid-cols-1 lg:grid-cols-5 md:gap-8">
 
                 {/* Left Column */}
