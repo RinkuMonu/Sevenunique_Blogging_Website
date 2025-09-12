@@ -10,6 +10,7 @@ import VisualStories from "../../../components/VisualStories";
 import MoreSports from "../../../components/MoreSports";
 import HotTopics from "../../../components/HotTopics";
 import NowPlaying from "../../../components/NowPlaying";
+import SponsoredBrandsSection from "../../../components/Sponsored";
 
 const images = [
   "/sports/img1.png", "/sports/img2.png", "/sports/img-3.png", "/sports/img1.png", "/sports/img2.png",
@@ -409,6 +410,7 @@ export default function page() {
         <FeaturedNewsCategory heading={"Asian Games"} articles={cricketNewsData} newsData={newsData} />
         <VisualStories visualStoriesData={visualStoriesData} />
         <MoreSports />
+         <SponsoredBrandsSection/>
         <HotTopics />
       </div>
     </>

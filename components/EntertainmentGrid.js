@@ -4,9 +4,9 @@ import Link from 'next/link';
 const EntertainmentGrid = ({ heading , data }) => {
   return (
     <div className="py-10">
-      <h2 className="text-3xl underline font-bold text-red-600 mb-6">
+      <p className="text-3xl underline font-bold text-red-600 mb-6">
         {heading}
-      </h2>
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {data.map((card) => (

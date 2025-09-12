@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import TechMobile from "../../../components/TechMobile";
+import LaptopPCSection from "../../../components/LaptopPCSection";
+import GamesSection from "../../../components/GamesSection";
 
 
 export default function NewsSection() {
@@ -9,7 +11,7 @@ export default function NewsSection() {
     <>
     <div className="px-24">
 
-      <section className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <section className="max-w-7xl mx-auto py-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Section */}
         <div className="lg:col-span-9 space-y-6">
           {/* Header + Top Advertisement */}
@@ -99,12 +101,12 @@ export default function NewsSection() {
         </aside>
       </section>
 
-
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="border-t border-gray-800 mt-6"></div>
-      </div>
+      <hr className='w-full h-2 mt-6' />
+      <hr className='w-full h-2 -mt-1' />
 
       <TechMobile />
+      <LaptopPCSection/>
+      <GamesSection/>
       </div>
 
     </>

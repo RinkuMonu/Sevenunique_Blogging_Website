@@ -7,6 +7,8 @@ import EntertainmentGrid from '../../../components/EntertainmentGrid';
 import MovieReviewSlider from '../../../components/MovieReviewSlider';
 import VisualStories from '../../../components/VisualStories';
 import HotTopics from '../../../components/HotTopics';
+import AddCompo from '../../../components/AddCompo';
+import SponsoredBrandsSection from '../../../components/Sponsored';
 
 
 const cardData = [
@@ -123,9 +125,10 @@ function page() {
                 </div>
             </section>
 
-
+    
 
             <Entertenment1 />
+             <AddCompo/>
             <EntertainmentGrid heading="Latest Movie News" data={cardData} />
             <EntertainmentGrid heading="Photos" data={cardData} />
 
@@ -154,7 +157,7 @@ function page() {
             <MovieReviewSlider/>
 
      <VisualStories visualStoriesData={visualStoriesData}/>
-
+ <SponsoredBrandsSection/>
 <HotTopics/>
         </div>
     )

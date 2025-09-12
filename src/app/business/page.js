@@ -9,6 +9,7 @@ import VisualStories from '../../../components/VisualStories'
 import BusinessComponent2 from '../../../components/BusinessComponent2'
 import BusinessComponent3 from '../../../components/BusinessComponent3'
 import BusinessComponent4 from '../../../components/BusinessComponent4'
+import SponsoredBrandsSection from '../../../components/Sponsored'
 
 const cricketNewsData = [
   {
@@ -71,6 +72,7 @@ function page() {
 <FeaturedNewsCategory heading={"Economy "} articles={cricketNewsData} newsData={newsData}  ExtraComponent={FocusSection}/>
      <VisualStories visualStoriesData={visualStoriesData}/>
      <BusinessComponent4/>
+     <SponsoredBrandsSection/>
 <HotTopics/>
 
 
