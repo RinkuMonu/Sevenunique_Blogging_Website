@@ -40,7 +40,6 @@ export default function BusinessComponent4() {
               <iframe
                 src="https://www.youtube.com/embed/2FX7OMExh2g?si=5fKwZXM8HsAr7PCh"
                 title="Live Breaking News"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -70,10 +69,10 @@ export default function BusinessComponent4() {
                   <iframe
                     src="https://www.youtube.com/embed/2FX7OMExh2g?si=5fKwZXM8HsAr7PCh"
                     title="Live Breaking News"
-                    frameborder="0"
+                    // frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    // allowfullscreen
                     className="w-full h-full rounded-lg shadow-md"
                   />
 
