@@ -9,6 +9,51 @@ import HotTopics from '../../../components/HotTopics';
 import AddCompo from '../../../components/AddCompo';
 import TopUniversities from '../../../components/TopUniversities';
 import Image from 'next/image';
+import EducationGrid from '../../../components/EducationGrid';
+
+
+
+ const educationData = [
+  {
+    imageUrl: "/education/ed1.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    imageUrl: "/education/ed2.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    imageUrl: "/education/ed3.png",
+    text: "Don't read success stories, you will only get a message. Read failure stories, you will get some ideas",
+  },
+  {
+    imageUrl: "/education/ed1.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    imageUrl: "/education/ed2.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    imageUrl: "/education/ed3.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    imageUrl: "/education/ed1.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    imageUrl: "/education/ed3.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    imageUrl: "/education/ed2.png",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+];
+
+
+
 const cricketNewsData = [
   {
     id: 1,
@@ -234,8 +279,10 @@ function Page() {
     </section>
         <FeaturedNewsCategory heading={"Govt. Exams & Results "} articles={cricketNewsData} newsData={newsData}  ExtraComponent={FocusSection}/>
       <AddCompo/>
-      <TopUniversities/>
+    
               <SportNews2 heading={"Jobs"} articles={articles} newsData={newsData} />
+                <TopUniversities/>
+                   <EducationGrid cardData={educationData} heading={" Success Stories"}/>
                    <VisualStories visualStoriesData={visualStoriesData}/>
                    <SponsoredBrandsSection/>
                    <HotTopics/>
