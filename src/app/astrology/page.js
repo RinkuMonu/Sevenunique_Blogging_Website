@@ -49,6 +49,28 @@ export default function page() {
         { img: "/Newimg/Astrology/T7.png", alt: "Tip 3", desc: "Third custom description." },
         { img: "/Newimg/Astrology/T8.png", alt: "Tip 3", desc: "Third custom description." },
     ];
+    
+const storiesData = [
+    {
+      img: "/Newimg/Tech/11.png",
+      overlay: "Tech news and updates",
+      items: [
+        "AI breakthrough this week",
+        "New smartphone released",
+        "Top 10 programming languages",
+      ],
+    },
+    {
+      img: "/Newimg/Tech/12.png",
+      overlay: "Gadgets and Reviews",
+      items: ["Smartwatch review", "Laptop comparison", "Best headphones 2025"],
+    },
+    {
+      img: "/Newimg/Tech/13.png",
+      overlay: "Innovations in tech",
+      items: ["Electric cars trends", "Space exploration updates", "Robotics news"],
+    },
+  ];
     return (
         <>
             <div className='px-24'>
@@ -60,7 +82,7 @@ export default function page() {
                 <AstroTipsSection 
                     tips={tipsData1} />
                 <VisualStoriesSwiper />
-                <MoreStories />
+                <MoreStories stories={storiesData} />
                 <SponsoredBrandsSection />
                 <HotTopics />
 

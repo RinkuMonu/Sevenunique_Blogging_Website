@@ -1,61 +1,11 @@
 import Image from "next/image";
 
-export default function MoreStories() {
-  // Data for each column
-  const stories = [
-    {
-      img: "/Newimg/Tech/11.png",
-      overlay: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-      items: [
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-      ],
-    },
-    {
-      img: "/Newimg/Tech/12.png",
-      overlay: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-      items: [
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-      ],
-    },
-    {
-      img: "/Newimg/Tech/13.png",
-      overlay: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-      items: [
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
-      ],
-    },
-  ];
-
+export default function MoreStories({ stories = [] }) {
   return (
     <section className="max-w-7xl mx-auto pb-8">
-      <h1 className="text-3xl font-bold text-red-600 underline underline-offset-2 mb-6">More Stories</h1>
+      <h1 className="text-3xl font-bold text-red-600 underline underline-offset-2 mb-6">
+        More Stories
+      </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {stories.map((story, idx) => (
@@ -64,7 +14,7 @@ export default function MoreStories() {
               <Image
                 src={story.img}
                 alt="Story image"
-                layout="fill"
+                fill 
                 objectFit="cover"
                 className="rounded-xl"
                 priority={idx === 0}
@@ -75,20 +25,23 @@ export default function MoreStories() {
                 </div>
               </div>
             </div>
-            {/* List of items */}
-            <div className="flex flex-col gap-2 cursor-pointer ">
+
+            <div className="flex flex-col gap-2 cursor-pointer">
               {story.items.map((item, i) => (
-                <div key={i} className="text-base text-blue-800 hover:text-red-500">{item}</div>
+                <div key={i} className="text-base text-blue-800 hover:text-red-500">
+                  {item}
+                </div>
               ))}
             </div>
           </div>
         ))}
       </div>
+
       <div className="w-full justify-center flex mt-8">
-                <button className="bg-red-600 text-white cursor-pointer rounded-full px-10 py-2 text-md  font-semibold hover:bg-red-700 shadow-xl mb-3">
-                    View more
-                </button>
-            </div>
+        <button className="bg-red-600 text-white cursor-pointer rounded-full px-10 py-2 text-md font-semibold hover:bg-red-700 shadow-xl mb-3">
+          View more
+        </button>
+      </div>
     </section>
   );
 }

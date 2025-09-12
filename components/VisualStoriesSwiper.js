@@ -50,6 +50,8 @@ export default function VisualStoriesSwiper() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <hr className="w-full h-2 mt-6" />
+            <hr className="w-full h-2 -mt-1" />
         </section>
     );
 }

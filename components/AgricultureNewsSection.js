@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AgricultureNewsSection({ heroData, newsCards }) {
     return (
-        <section className="max-w-7xl mx-auto py-8">
+        <section className="max-w-7xl mx-auto pb-8">
             <div className="flex justify-between mb-4">
                 <h1 className="text-3xl font-bold text-red-600 underline underline-offset-2 mb-2">Agriculture News</h1>
 
@@ -49,7 +49,8 @@ export default function AgricultureNewsSection({ heroData, newsCards }) {
                     </div>
                 </div>
             </div>
-
+            <hr className="w-full h-2 mt-6" />
+            <hr className="w-full h-2 -mt-1" />
         </section>
     );
 }

@@ -98,7 +98,7 @@ export default function page() {
                 <AstroTipsSection title=""
                     tips={tipsData1} />
                 <AdsSection />
-                <CartoonsSection cartoons={cartoons} />
+                <CartoonsSection cartoons={cartoons} heading="Cartoon" />
                 <BlogsSection blogs={homeBlogs} />
                 <VisualStoriesSwiper />
                 <SponsoredBrandsSection />

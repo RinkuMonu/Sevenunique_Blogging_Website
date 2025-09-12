@@ -1,26 +1,15 @@
-import Image from "next/image";
-import { useRef } from "react";
-export default function VideosSection() {
-    const sideVideos = [
-        {
-            videoUrl: "https://youtu.be/OGs2YsqvWDg?si=7m-8a7L8_eZawJJy",
-            desc: "Lorem ipsum dolor sit amet, consectetur",
-        },
-        {
-            videoUrl: "https://youtu.be/Cr9B6yyLZSk?si=mLNLtz9fDe30dPeK",
-            desc: "Lorem ipsum dolor sit amet, consectetur",
-        },
-        {
-            videoUrl: "https://youtu.be/Otim2mDjsYM?si=mN9JBexOjrj-OZJO",
-            desc: "Lorem ipsum dolor sit amet, consectetur",
-        },
-    ];
+"use client";
+import React from "react";
+
+export default function VideosSection({ featuredVideo, sideVideos }) {
     function extractVideoId(url) {
         const regExp =
             /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
         const match = url.match(regExp);
         return match && match[2].length === 11 ? match[2] : null;
     }
+
+    const featuredVideoId = extractVideoId(featuredVideo.videoUrl);
 
     return (
         <section className="max-w-7xl mx-auto py-8">
@@ -32,9 +21,9 @@ export default function VideosSection() {
             <div className="flex flex-col md:flex-row gap-6 items-start">
                 {/* Featured Video */}
                 <div className="w-full md:w-[60%] relative">
-                    <div className="rounded-lg  w-full h-96 overflow-hidden relative">
+                    <div className="rounded-lg w-full h-96 overflow-hidden relative">
                         <iframe
-                            src="https://www.youtube.com/embed/1UufaK3pQMg?si=0U61BB4ejXhp--mL"
+                            src={`https://www.youtube.com/embed/${featuredVideoId}?rel=0&autoplay=0`}
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerPolicy="strict-origin-when-cross-origin"
@@ -43,8 +32,7 @@ export default function VideosSection() {
                         />
                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 to-transparent p-5">
                             <p className="text-white text-lg font-semibold">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                eiusmod
+                                {featuredVideo.desc}
                             </p>
                         </div>
                     </div>
@@ -57,9 +45,9 @@ export default function VideosSection() {
                         return (
                             <div
                                 key={idx}
-                                className="flex items-center  gap-3  p-2 cursor-pointer"
+                                className="flex items-center gap-3 p-2 cursor-pointer"
                             >
-                                <div className="relative w-[200px] h-[110] flex-shrink-0 overflow-hidden">
+                                <div className="relative w-[200px] h-[110px] flex-shrink-0 overflow-hidden">
                                     <YoutubeEmbed videoId={videoId} />
                                 </div>
                                 <span className="text-md text-[#002765] font-medium">
@@ -73,24 +61,25 @@ export default function VideosSection() {
 
             {/* View More Button */}
             <div className="w-full justify-center flex">
-                <button className="bg-red-600 text-white cursor-pointer rounded-full px-6 py-2 text-sm  font-semibold hover:bg-red-700 shadow-xl mb-3">
+                <button className="bg-red-600 text-white cursor-pointer rounded-full px-6 py-2 text-sm font-semibold hover:bg-red-700 shadow-xl mb-3">
                     View more
                 </button>
             </div>
-            <hr className='w-full h-2 mt-8' />
-            <hr className='w-full h-2 -mt-1' />
+
+            <hr className="w-full h-2 mt-8" />
+            <hr className="w-full h-2 -mt-1" />
         </section>
     );
 }
+
 function YoutubeEmbed({ videoId }) {
     return (
         <div className="relative rounded-md overflow-hidden shadow-md">
             <iframe
-                className="w-[200px] h-[110]"
-                src={`https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`}
-                // allow="autoplay; encrypted-media"
+                className="w-[200px] h-[110px]"
+                src={`https://www.youtube.com/embed/${videoId}?rel=0&autoplay=0`}
                 allowFullScreen
-                title="Podcast video"
+                title="Embedded video"
             />
         </div>
     );

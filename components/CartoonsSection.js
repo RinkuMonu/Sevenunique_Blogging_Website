@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-export default function CartoonsSection({ cartoons }) {
+export default function CartoonsSection({ cartoons, heading }) {
   return (
     <>
-    <section className="max-w-7xl mx-auto py-8">
+    <section className="max-w-7xl mx-auto pb-8">
       {/* Title */}
-      <h1 className="text-3xl font-bold text-red-600 underline underline-offset-2 mb-6">Cartoons</h1>
+      <h1 className="text-3xl font-bold text-red-600 underline underline-offset-2 mb-6">{heading}</h1>
 
       {/* Cartoon grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 mb-8">
@@ -32,7 +32,7 @@ export default function CartoonsSection({ cartoons }) {
 
       {/* View more button */}
       <div className="flex justify-center mt-2">
-        <button className="bg-red-600 text-white font-semibold py-2 px-14 rounded-full text-lg hover:bg-red-700 transition">
+        <button className="bg-red-600 text-white font-semibold shadow-2xl py-2 px-14 rounded-full text-lg hover:bg-red-700 transition">
           View more
         </button>
       </div>
