@@ -30,3 +30,17 @@ body {
   border-radius: 10px;
 
 }
+button{
+  cursor: pointer;
+}
+/* .visualstories.swiper-pagination {
+  position: absolute !important;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: auto !important;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+} */
