@@ -42,6 +42,9 @@ export default function MoreStories({ stories = [] }) {
           View more
         </button>
       </div>
+      
+      <hr className="w-full h-2 mt-8" />
+            <hr className="w-full h-2 -mt-1" />
     </section>
   );
 }

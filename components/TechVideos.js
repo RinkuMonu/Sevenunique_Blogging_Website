@@ -12,7 +12,7 @@ export default function VideosSection({ featuredVideo, sideVideos }) {
     const featuredVideoId = extractVideoId(featuredVideo.videoUrl);
 
     return (
-        <section className="max-w-7xl mx-auto py-8">
+        <section className="max-w-7xl mx-auto pb-8">
             {/* Section Title */}
             <h1 className="text-4xl font-bold text-red-600 mb-6 underline underline-offset-2">
                 Videos
@@ -61,7 +61,7 @@ export default function VideosSection({ featuredVideo, sideVideos }) {
 
             {/* View More Button */}
             <div className="w-full justify-center flex">
-                <button className="bg-red-600 text-white cursor-pointer rounded-full px-6 py-2 text-sm font-semibold hover:bg-red-700 shadow-xl mb-3">
+                <button className="bg-red-600 text-white cursor-pointer shadow-2xl rounded-full px-6 py-2 text-sm font-semibold hover:bg-red-700  mb-3">
                     View more
                 </button>
             </div>

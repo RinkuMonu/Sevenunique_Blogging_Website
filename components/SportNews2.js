@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import ArticleList from './ArticalListVer';
 import SportNewsS1 from './SportNewsS1';
@@ -53,7 +55,7 @@ export default function SportNews2({ heading , articles ,newsData }) {
 
     return (
         <>
-            <div className='grid lg:grid-cols-7  py-10 border-t border-b border-black '>
+            <div className='grid lg:grid-cols-7  pb-10  border-black '>
                 <div className='lg:col-span-5'>
                <SportNewsS1 heading={heading} articles={articles} newsData={newsData}/>
                 </div>
