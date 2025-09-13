@@ -75,17 +75,9 @@ export default function GamesSection() {
                 </div>
                 {/* Right Advertisement Sidebar */}
                 <div className="hidden lg:flex flex-col items-center w-56">
-                    <div className="bg-gray-100 rounded-xl shadow px-2 py-4 w-full flex flex-col items-center mb-5">
-                        <div className="font-semibold text-black text-center mb-2">Advertisement</div>
-                        <div className="text-center text-base font-bold mb-4">160*600</div>
-                        {/* Ad logo grid */}
-                        <div className="space-y-1 mb-2 w-full flex flex-col items-center">
-                            <Image src="/ads/sevenunique-logo1.png" alt="" width={100} height={24} />
-                            <Image src="/ads/sevenunique-logo1.png" alt="" width={100} height={24} />
-                            <Image src="/ads/sevenunique-logo1.png" alt="" width={100} height={24} />
-                        </div>
-                        <Image src="/ads/sevenunique-large.png" alt="" width={120} height={120} />
-                    </div>
+                <div className=" w-full flex flex-col items-center mb-5">
+            <Image src="/Newimg/header/sidenew.jpg" className="w-[250px] h-[450px] object-cover rounded-md" alt="sidenews" width={160} height={600} />
+          </div>
                 </div>
             </div>
             <FocusSection />

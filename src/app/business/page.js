@@ -15,7 +15,7 @@ const cricketNewsData = [
   {
     id: 1,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-    imageUrl:   "/sports/img4.png",
+    imageUrl: "/sports/img4.png",
   },
   { id: 2, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in' },
   { id: 3, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in' },
@@ -62,18 +62,30 @@ function page() {
   return (
     <>
       <div className='px-4 lg:px-24 py-5'>
-<NowPlaying/>
+        <NowPlaying />
 
-<BusinessComponent/>
-<FeaturedNewsCategory heading={"India Business News"} articles={cricketNewsData} newsData={newsData}  ExtraComponent={FocusSection}/>
-<BusinessComponent2/>
-<BusinessComponent3/>
+        <BusinessComponent />
+        <FeaturedNewsCategory heading={"India Business News"} articles={cricketNewsData} newsData={newsData} ExtraComponent={FocusSection} />
+        <BusinessComponent2
+          topImage="/sports/img6.png"
+          topTitle="Custom Top Large Card Title"
+          detailedCard={{
+            image: "/sports/img4.png",
+            title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod orem ipsum dolor sit amet, consectet."
+          }}
+          rightCards={[
+            { text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ", image: "/sports/img7.png" },
+            { text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ", image: "/sports/img8.png" },
+            { text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ", image: "/sports/img8.png" }
+          ]}
+        />
+        <BusinessComponent3 />
 
-<FeaturedNewsCategory heading={"Economy "} articles={cricketNewsData} newsData={newsData}  ExtraComponent={FocusSection}/>
-     <VisualStories visualStoriesData={visualStoriesData}/>
-     <BusinessComponent4/>
-     <SponsoredBrandsSection/>
-<HotTopics/>
+        <FeaturedNewsCategory heading={"India Business News"} articles={cricketNewsData} newsData={newsData} ExtraComponent={FocusSection} />
+        <VisualStories visualStoriesData={visualStoriesData} />
+        <BusinessComponent4 />
+        <HotTopics />
 
 
       </div>

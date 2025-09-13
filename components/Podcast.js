@@ -115,7 +115,7 @@ export default function PodcastSection() {
                                     {pod.description}
                                 </div>
                                 <div className="w-full">
-                                <button className="bg-red-600 text-white rounded-full px-6 py-2 text-sm float-end font-semibold hover:bg-red-700 shadow-xl mb-3">
+                                <button className="bg-red-600 text-white cursor-pointer rounded-full px-6 py-2 text-sm float-end font-semibold hover:bg-red-700 shadow-xl mb-3">
                                     View more
                                 </button>
                                 </div>

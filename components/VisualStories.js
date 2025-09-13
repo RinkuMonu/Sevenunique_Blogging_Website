@@ -1,30 +1,28 @@
+"use client"
 import React, { useState } from 'react';
 
-// Main App Component with all sections combined
-export default function VisualStories({visualStoriesData}) {
-  // State for the Visual Stories slider
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function VisualStories({ visualStoriesData }) {
+    const [currentIndex, setCurrentIndex] = useState(0);
 
 
-  // Logic for the Visual Stories slider
-  const handleDotClick = (index) => {
-    setCurrentIndex(index);
-  };
-  const numDots = Math.ceil(visualStoriesData.length / 4);
+    const handleDotClick = (index) => {
+        setCurrentIndex(index);
+    };
+    const numDots = Math.ceil((visualStoriesData?.length || 0) / 4);
 
 
 
-  return (
-    <div className="py-10">
-           <h3 className="text-3xl underline font-bold text-red-600 mb-6">Visual Stories</h3>
+    return (
+        <div className="py-10">
+            <h3 className="text-2xl font-bold text-red-600 mb-4 border-b-4 border-red-600 inline-block">Visual Stories</h3>
             <div className="relative">
                 <div className="overflow-hidden">
-                    <div 
+                    <div
                         className="flex transition-transform duration-500 ease-in-out"
                         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                     >
-                        {visualStoriesData.map((story) => (
-                            <div key={story.id} className="flex-shrink-0 w-full  md:w-1/2 lg:w-1/4 p-2">
+                        {visualStoriesData?.map((story) => (
+                            <div key={story.id} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/4 p-2">
                                 <div className="relative rounded-lg overflow-hidden h-[70vh] shadow-lg">
                                     <img src={story.imageUrl} alt={story.title} className="w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
@@ -34,10 +32,11 @@ export default function VisualStories({visualStoriesData}) {
                                 </div>
                             </div>
                         ))}
+
                     </div>
                 </div>
             </div>
-             <div className="flex justify-center mt-4 space-x-2">
+            <div className="flex justify-center mt-4 space-x-2">
                 {Array.from({ length: numDots }).map((_, idx) => (
                     <button
                         key={idx}
@@ -47,8 +46,8 @@ export default function VisualStories({visualStoriesData}) {
                 ))}
             </div>
         </div>
- 
 
-  );
+
+    );
 }
 
