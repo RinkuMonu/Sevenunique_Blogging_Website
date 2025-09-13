@@ -312,7 +312,7 @@ export default function page() {
                   src="/sports/img4.png"
                   alt="Cricket players celebrating"
                   className="w-full min-h-[55vh] object-cover rounded-lg mb-4"
-                  onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
+                
                 />
               </div>
               <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
@@ -328,7 +328,7 @@ export default function page() {
                     src="/sports/img6.png"
                     alt="Cricket players celebrating"
                     className="w-full h-50 object-cover rounded-lg mb-4"
-                    onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
+                  
                   />
                 </div>
                 <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
@@ -342,7 +342,7 @@ export default function page() {
                     src="/sports/img8.png"
                     alt="Cricket players celebrating"
                     className="w-full h-50 object-cover rounded-lg mb-4"
-                    onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
+                  
                   />
                 </div>
                 <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>

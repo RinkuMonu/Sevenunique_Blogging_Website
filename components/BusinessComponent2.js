@@ -49,7 +49,7 @@ const BusinessComponent2 = ({ topImage, topTitle, detailedCard, rightCards }) =>
 
             <FocusSection />
             <hr className="w-full h-2 mt-6" />
-      <hr className="w-full h-2 -mt-1" />
+      
         </div>
     );
 };

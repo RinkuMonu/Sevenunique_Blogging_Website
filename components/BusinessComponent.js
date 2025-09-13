@@ -33,39 +33,14 @@ const LargeCard = ({ imageUrl, text }) => {
 };
 
 // Main App component
-export default function BusinessComponent() {
-  const leftCards = [
-    { text: "Left card 1: Latest sports update with key highlights", imageUrl: "/sports/img1.png" },
-    { text: "Left card 2: In-depth analysis of the recent matches", imageUrl: "/sports/img2.png" },
-    { text: "Left card 3: Player interviews and behind-the-scenes", imageUrl: "/sports/img3.png" },
-    { text: "Left card 4: Upcoming tournaments schedule and news", imageUrl: "/sports/img4.png" },
-
-  ];
-
-  const rightCards = [
-    { text: "Right card 1: Top stories from around the globe", imageUrl: "/sports/img6.png" },
-    { text: "Right card 2: Expert opinions and match predictions", imageUrl: "/sports/img7.png" },
-    { text: "Right card 3: Highlights of key sports events", imageUrl: "/sports/img8.png" },
-    { text: "Right card 4: Training tips and player fitness updates", imageUrl: "/sports/img9.png" },
-
-  ];
-
-  const mainCards = [
-    {
-      imageUrl: "/sports/img6.png",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
-    },
-    {
-      imageUrl: "/sports/img7.png",
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
-    },
-  ];
+export default function BusinessComponent({mainCards, leftCards, rightCards , heading}) {
+ 
 
   return (
     <div className="py-4 sm:py-6 lg:py-8 ">
       <div className="">
     <p className="text-3xl underline font-bold text-red-600 mb-6">
-          Banking News
+         {heading}
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
