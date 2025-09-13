@@ -17,21 +17,29 @@ export default function FeaturedNewsCategory({ heading, articles, newsData ,Extr
 
     return (
         <>
-           <div className='py-10 border-t border-b border-black'>
-             <div className='grid lg:grid-cols-5 '>
-                <div className='lg:col-span-4'>
-                    <SportNewsS1 heading={heading} articles={articles} newsData={newsData} />
-                </div>
-                <div className="lg:col-span-1 px-5 flex items-center">
-                      
-                                           <Image width={300} height={900} src="/Newimg/header/sidenew.jpg" alt="Ad" className="object-cover min-h-screen  relative adverimg" />
-                                    
-                </div>
-                   
-      
-            </div>
-            {ExtraComponent && <ExtraComponent />}
-           </div>
+          <div className="py-10 border-t border-b border-black">
+  <div className="lg:flex lg:gap-0">
+    {/* Left Section */}
+    <div className="lg:flex-1">
+      <SportNewsS1 heading={heading} articles={articles} newsData={newsData} />
+    </div>
+
+    {/* Right Section */}
+    <div className="lg:w-[300px] lg:flex-shrink-0 px-4 ">
+      <div className="relative h-full w-full rounded-lg">
+        <Image
+          src="/Newimg/header/sidenew.jpg"
+          alt="Ad"
+          fill
+          className="object-cover rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
+
+  {ExtraComponent && <ExtraComponent />}
+</div>
+
         </>
     );
 };

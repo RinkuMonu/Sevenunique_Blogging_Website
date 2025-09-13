@@ -27,9 +27,9 @@ export default function BusinessComponent3() {
   return (
     <div className="py-10">
   
-        <h1 className="text-2xl font-bold text-red-600 mb-4 border-b-4 border-red-600 inline-block">
+        <p className="text-3xl underline font-bold text-red-600 mb-6">
           Startup
-        </h1>
+        </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-7 gap-8">
           {/* Left Column */}
@@ -47,9 +47,9 @@ export default function BusinessComponent3() {
 
               {/* Content on top */}
               <div className="relative h-full flex flex-col justify-center items-center p-6 text-white text-center">
-                <h2 className="text-5xl font-extrabold tracking-widest mb-2">
+                <p className="text-5xl font-extrabold tracking-widest mb-2">
                   START UP
-                </h2>
+                </p>
                 <p className="text-lg max-w-xl">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 </p>

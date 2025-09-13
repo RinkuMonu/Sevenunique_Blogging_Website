@@ -10,6 +10,7 @@ import VisualStories from "../../../components/VisualStories";
 import MoreSports from "../../../components/MoreSports";
 import HotTopics from "../../../components/HotTopics";
 import NowPlaying from "../../../components/NowPlaying";
+import SponsoredBrandsSection from "../../../components/Sponsored";
 
 const images = [
   "/sports/img1.png", "/sports/img2.png", "/sports/img-3.png", "/sports/img1.png", "/sports/img2.png",
@@ -302,7 +303,7 @@ export default function page() {
 
 
 
-        <section className="py-20">
+        <section className="py-5">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
 
             <div className=" p-4 rounded-lg">
@@ -311,7 +312,7 @@ export default function page() {
                   src="/sports/img4.png"
                   alt="Cricket players celebrating"
                   className="w-full min-h-[55vh] object-cover rounded-lg mb-4"
-                  onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
+                
                 />
               </div>
               <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
@@ -327,7 +328,7 @@ export default function page() {
                     src="/sports/img6.png"
                     alt="Cricket players celebrating"
                     className="w-full h-50 object-cover rounded-lg mb-4"
-                    onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
+                  
                   />
                 </div>
                 <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
@@ -341,7 +342,7 @@ export default function page() {
                     src="/sports/img8.png"
                     alt="Cricket players celebrating"
                     className="w-full h-50 object-cover rounded-lg mb-4"
-                    onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/cccccc/ffffff?text=Image+Not+Found'; }}
+                  
                   />
                 </div>
                 <p className="text-gray-500 text-sm mb-2">Updated 9 mins ago</p>
@@ -384,14 +385,20 @@ export default function page() {
               </div>
 
               {/* Column 3 (Advertisement) */}
-              <div className="lg:col-span-1 px-5 flex items-center">
-
-                <Image width={300} height={900} src="/Newimg/header/sidenew.jpg" alt="Ad" className="object-cover min-h-screen  relative adverimg" />
-
-              </div>
+               <div className="lg:w-[300px] lg:flex-shrink-0 px-4 ">
+                   <div className="relative h-full w-full rounded-lg">
+                     <Image
+                       src="/Newimg/header/sidenew.jpg"
+                       alt="Ad"
+                       fill
+                       className="object-cover rounded-lg"
+                     />
+                   </div>
+                 </div>
 
             </div>
           </div>
+ 
         </section>
 
 
@@ -403,6 +410,7 @@ export default function page() {
         <FeaturedNewsCategory heading={"Asian Games"} articles={cricketNewsData} newsData={newsData} />
         <VisualStories visualStoriesData={visualStoriesData} />
         <MoreSports />
+         <SponsoredBrandsSection/>
         <HotTopics />
       </div>
     </>

@@ -9,6 +9,7 @@ import VisualStories from '../../../components/VisualStories'
 import BusinessComponent2 from '../../../components/BusinessComponent2'
 import BusinessComponent3 from '../../../components/BusinessComponent3'
 import BusinessComponent4 from '../../../components/BusinessComponent4'
+import SponsoredBrandsSection from '../../../components/Sponsored'
 
 const cricketNewsData = [
   {
@@ -57,13 +58,39 @@ const visualStoriesData = [
   { id: 8, title: 'Lorem ipsum dolor sit amet, consectetur adipiscing', imageUrl: '/sports/img11.png' },
 ];
 
+ const leftCards = [
+    { text: "Left card 1: Latest sports update with key highlights", imageUrl: "/sports/img1.png" },
+    { text: "Left card 2: In-depth analysis of the recent matches", imageUrl: "/sports/img2.png" },
+    { text: "Left card 3: Player interviews and behind-the-scenes", imageUrl: "/sports/img3.png" },
+    { text: "Left card 4: Upcoming tournaments schedule and news", imageUrl: "/sports/img4.png" },
+
+  ];
+
+  const rightCards = [
+    { text: "Right card 1: Top stories from around the globe", imageUrl: "/sports/img6.png" },
+    { text: "Right card 2: Expert opinions and match predictions", imageUrl: "/sports/img7.png" },
+    { text: "Right card 3: Highlights of key sports events", imageUrl: "/sports/img8.png" },
+    { text: "Right card 4: Training tips and player fitness updates", imageUrl: "/sports/img9.png" },
+
+  ];
+
+  const mainCards = [
+    {
+      imageUrl: "/sports/img6.png",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+    },
+    {
+      imageUrl: "/sports/img7.png",
+      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+    },
+  ];
 function page() {
   return (
     <>
       <div className='px-4 lg:px-24 py-5'>
         <NowPlaying />
 
-        <BusinessComponent />
+        <BusinessComponent mainCards={mainCards} leftCards={leftCards} rightCards={rightCards} heading={" Banking News"} />
         <FeaturedNewsCategory heading={"India Business News"} articles={cricketNewsData} newsData={newsData} ExtraComponent={FocusSection} />
         <BusinessComponent2
           topImage="/sports/img6.png"
@@ -84,6 +111,7 @@ function page() {
         <FeaturedNewsCategory heading={"India Business News"} articles={cricketNewsData} newsData={newsData} ExtraComponent={FocusSection} />
         <VisualStories visualStoriesData={visualStoriesData} />
         <BusinessComponent4 />
+         <SponsoredBrandsSection/>
         <HotTopics />
 
 
