@@ -276,7 +276,7 @@ export default function page() {
             </div>
           </div>
 
-          {/* 🔴 Controls */}
+    
           <div className="mx-auto mt-6 flex items-center">
             {/* Dots */}
             <div className="flex space-x-2">
