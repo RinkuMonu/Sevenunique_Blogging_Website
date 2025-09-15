@@ -190,7 +190,7 @@ function page() {
 
             <section className="py-5">
                 <div className='grid lg:grid-cols-4 '>
-                    <p className="text-2xl font-bold text-red-600 underline mb-6 col-span-1">
+                    <p className="text-3xl underline font-bold text-red-600 mb-6">
                         Auto News
                     </p>
                   

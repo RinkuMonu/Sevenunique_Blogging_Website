@@ -5,9 +5,9 @@ import FocusSection from './FocusSection';
 const BusinessComponent2 = ({ topImage, topTitle, detailedCard, rightCards }) => {
     return (
         <div className="pb-8 pt-4 ">
-            <h3 className="text-3xl font-bold text-red-600 mb-4 border-b-4 border-red-600 inline-block">
+           <p className="text-3xl underline font-bold text-red-600 mb-6">
                 International Business news
-            </h3>
+            </p>
             <div className="grid grid-cols-1 lg:grid-cols-5 md:gap-8">
                 <div className="col-span-3">
                     <div className="flex flex-col gap-6">
