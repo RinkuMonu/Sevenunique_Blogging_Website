@@ -82,7 +82,7 @@ export default function GamesSection() {
             </div>
             <FocusSection />
             <hr className='w-full h-2 mt-8' />
-            <hr className='w-full h-2 -mt-1' />
+
         </div>
     );
 }

@@ -11,7 +11,7 @@ export default function TechMobile() {
           {/* Top image section */}
           <div className="relative rounded-xl overflow-hidden h-64">
             <Image
-              src="/images/mobile-img.png"
+              src="/images/technology/mobile-img.png"
               alt="Top Feature"
               layout="fill"
               className="object-cover"
@@ -27,7 +27,7 @@ export default function TechMobile() {
           <div className="flex gap-4">
             <div className="rounded-xl overflow-hidden w-1/2 relative h-48 flex-shrink-0">
               <Image
-                src="/images/mobile-img2.png"
+                src="/images/technology/mobile-img2.png"
                 alt="Bottom Left"
                 layout="fill"
                 className="object-cover"
@@ -49,7 +49,7 @@ export default function TechMobile() {
           <div className="flex bg-white rounded-xl overflow-hidden  shadow-sm">
             <div className="w-2/5 relative h-28 flex-shrink-0">
               <Image
-                src="/images/mob-1.png"
+                src="/images/technology/mob-1.png"
                 alt="Side Card 1"
                 layout="fill"
                 className="object-cover"
@@ -65,7 +65,7 @@ export default function TechMobile() {
           <div className="flex bg-white rounded-xl overflow-hidden  shadow-sm">
             <div className="w-2/5 relative h-28 flex-shrink-0">
               <Image
-                src="/images/mob-2.png"
+                src="/images/technology/mob-2.png"
                 alt="Side Card 2"
                 layout="fill"
                 className="object-cover"
@@ -81,7 +81,7 @@ export default function TechMobile() {
           <div className="flex bg-white rounded-xl overflow-hidden  shadow-sm">
             <div className="w-2/5 relative h-28 flex-shrink-0">
               <Image
-                src="/images/mob-3.png"
+                src="/images/technology/mob-3.png"
                 alt="Side Card 3"
                 layout="fill"
                 className="object-cover"
@@ -97,7 +97,7 @@ export default function TechMobile() {
       </div>
       <FocusSection />
       <hr className='w-full h-2 mt-6' />
-      <hr className='w-full h-2 -mt-1' />
+      {/* <hr className='w-full h-2 -mt-1' /> */}
     </div>
   );
 }

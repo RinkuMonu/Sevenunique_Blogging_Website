@@ -104,7 +104,7 @@ export default function TechTips() {
                 <div className="w-full md:w-[30%] flex flex-col gap-4">
                     {listCards.map((card, i) => (
                         <div key={i} className="flex items-center gap-3 p-3  cursor-pointer hover:text-red-500">
-                            <Image width={200} height={85} src={card.img} alt={card.title} className="w-52 h-16 object-cover rounded" />
+                            <Image width={200} height={85} src={card.img} alt={""} className="w-52 h-16 object-cover rounded" />
                             <div>
                                 <p className="text-sm">{card.desc}</p>
                             </div>
@@ -114,7 +114,7 @@ export default function TechTips() {
             </div>
             <FocusSection />
             <hr className='w-full h-2 mt-6' />
-            <hr className='w-full h-2 -mt-1' />
+            {/* <hr className='w-full h-2 -mt-1' /> */}
         </section>
     );
 }
