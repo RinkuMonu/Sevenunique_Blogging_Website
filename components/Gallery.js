@@ -8,7 +8,7 @@ const Gallery = ({data}) => {
     <section className="py-10">
       
         <div className="mb-12">
-        <p className="text-2xl font-bold text-red-600 underline mb-6 col-span-1">
+    <p className="text-3xl underline font-bold text-red-600 mb-6">
             Dance
           </p>
         </div>
