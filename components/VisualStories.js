@@ -14,7 +14,7 @@ export default function VisualStories({ visualStoriesData }) {
 
     return (
         <div className="py-10">
-         <h3 className="text-3xl underline font-bold text-red-600 mb-6">Visual Stories</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-4 border-b-4 border-red-600 inline-block">Visual Stories</h3>
             <div className="relative">
                 <div className="overflow-hidden">
                     <div

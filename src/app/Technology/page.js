@@ -172,7 +172,7 @@ export default function NewsSection() {
         </section>
 
         <hr className="w-full h-2 mt-6" />
-        <hr className="w-full h-2 -mt-1" />
+        {/* <hr className="w-full h-2 -mt-1" /> */}
 
         <TechMobile />
         <LaptopPCSection />
